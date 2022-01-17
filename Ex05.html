@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //변수
+      //Javascript에서의 변수는 자료형을 따로 명시 해주지 않는다.(자동으로 자료형이 지정된다)
+      //단!!! '이것은 변수입니다!' 라고하는 변수선언키워드를 적어준다!
+      //var키워드
+      //재선언과 재할당 가능
+      var num = 10;
+      console.log("현재 저장되어있는 수는" + num + "입니다!");
+
+      var num = 30; // 자바랑 다르게 오류가 안남!
+      //같은 이름으로 변수를 여러번 선언 할 수 있다.(재선언 가능)
+      console.log("현재 저장되어있는 수는" + num + "입니다!");
+
+      //let키워드
+      //자료형은 따로 명시해주지 않아도 된다!
+      //var 키워드와 다르게 같은 이름의 변수를 한번만 선언 할 수 있다!
+      //재선언은 안되지만 재할당은 가능하다
+      let number = 10;
+      // let number = 30; 재선언은 안됨!
+      // number = 40; 재할당은 가능!
+      console.log("let 키워드 변수" + number);
+
+      //const 키워드
+      //상수를 지정해주는 키워드
+      const data = 100;
+      //const tada = 300; 재선언 안됨!
+      //data = 200; 재할당도 안됨!
+
+      let name;
+      consoel.log(name);
+
+      //undefinde -> 값자체가 없는것(공간도 존재하지 않는다)
+      //null -> 빈공간
+    </script>
+  </body>
+</html>
