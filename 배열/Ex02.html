@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열 실습
+      let ary = [];
+
+      let count = 0;
+
+      for (let i = 0; i < 10; i++) {
+        let ran = parseInt(Math.random() * 100 + 1);
+        ary[i] = ran;
+        console.log(ary[i]);
+      }
+
+      for (let i = 0; i < ary.length; i++) {
+        if (ary[i] % 2 == 0) {
+          count++;
+        }
+      }
+      console.log("배열에 저장된 짝수는" + count + "개 입니다.");
+    </script>
+  </body>
+</html>
