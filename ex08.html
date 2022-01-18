@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //조건문 실습
+
+      let java = parseInt(prompt("JAVA점수를 입력하세요", "점수입력"));
+      let python = parseInt(prompt("PYTHON점수를 입력하세요", "점수입력"));
+      let R = parseInt(prompt("R점수를 입력하세요", "점수입력"));
+
+      let mean = parseInt((java + python + R) / 3);
+
+      if (mean >= 90) {
+        console.log("당신의 평균은" + mean + "이고 A입니다.");
+      } else if (mean >= 80) {
+        console.log("당신의 평균은" + mean + "이고 B입니다.");
+      } else if (mean >= 70) {
+        console.log("당신의 평균은" + mean + "이고 C입니다.");
+      } else {
+        console.log("당신의 평균은" + mean + "이고 F입니다.");
+      }
+
+      let grade = "";
+
+      if (mean >= 90) {
+        grade = "A";
+      } else if (mean >= 80) {
+        grade = "B";
+      } else if (mean >= 70) {
+        grade = "C";
+      } else {
+        grade = "휴학 ㄱ";
+      }
+
+      console.log("당신의 평균은" + mean + "이고" + grade + "입니다.");
+
+      let num1 = 3;
+      //자바스크립트에서는 조건식으로 값 자체가 외도 된다!!!!!! -> 값이 있으면 자동적으로 ture로 인식한다!
+      // 0, undefined,null 은 false로 인식한다!
+      if (num1) {
+        console.log("정답!");
+      }
+    </script>
+  </body>
+</html>
