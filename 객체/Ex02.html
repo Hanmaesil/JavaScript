@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //객체 실습
+      let person = {
+        name: "한국인",
+        age: "25",
+      };
+      console.log(person);
+
+      person.gender = "남";
+      person.address = "광주";
+      person.favMoivies = "어바웃타임, 마블영화";
+      person.favFood = "참치회,방어회,연어회";
+
+      console.log(person);
+
+      person.greeting = function () {
+        console.log(
+          //this로도 가능하다!
+          this.name +
+            "님의 나이는 " +
+            this.age +
+            "이고 성별은 " +
+            this.gender +
+            "입니다."
+        );
+        console.log(
+          "사는 곳은" +
+            person.address +
+            "이고 좋아하는 영화는 " +
+            person.favMoivies +
+            "등이 있습니다."
+        );
+        console.log("좋아하는 음식은 " + person.favMoivies + "입니다.");
+      };
+
+      person.greeting();
+    </script>
+  </body>
+</html>
