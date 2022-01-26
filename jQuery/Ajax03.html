@@ -9,6 +9,13 @@
   </head>
   <body>
     <h1>json 데이터를 가져와보자!</h1>
+    <table border="1" id="start">
+      <tr>
+        <td>순위</td>
+        <td>영화명</td>
+        <td>개봉일</td>
+      </tr>
+    </table>
     <button>정보가져오기</button>
 
     <script>
@@ -25,6 +32,32 @@
             console.log(res.boxOfficeResult.boxofficeType);
             //첫번째 영화 제목 출력
             console.log(res.boxOfficeResult.dailyBoxOfficeList[0].movieNm);
+
+            //.append() 메소드 사용하기
+            // $("#start").append(
+            //   "<tr>" +
+            //     "<td>1</td>" +
+            //     "<td>스파이더맨</td>" +
+            //     "<td>2021-12-10</td>" +
+            //     "</tr>"
+            // );
+            //실습!
+            let array = res.boxOfficeResult.dailyBoxOfficeList;
+            for (let i = 0; i < array.length; i++) {
+              $("#start").append(
+                "<tr>" +
+                  "<td>" +
+                  array[i].rank +
+                  "</td>" +
+                  "<td>" +
+                  res.boxOfficeResult.dailyBoxOfficeList[i].movieNm +
+                  "</td>" +
+                  "<td>" +
+                  res.boxOfficeResult.dailyBoxOfficeList[i].openDt +
+                  "</td>" +
+                  "</tr>"
+              );
+            }
           },
           error: function () {
             alert("실패");
